@@ -76,6 +76,31 @@
   },
   {
    "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from bs4 import BeautifulSoup\n",
+    "soup = BeautifulSoup(page.content, 'html.parser')\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": "<!DOCTYPE html>\n<html>\n <head>\n  <title>\n   A simple example page\n  </title>\n </head>\n <body>\n  <p>\n   Here is some simple content for this page.\n  </p>\n </body>\n</html>\n"
+    }
+   ],
+   "source": [
+    "print(soup.prettify())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": null,
    "metadata": {},
    "outputs": [],
